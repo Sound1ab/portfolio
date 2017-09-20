@@ -1,0 +1,31 @@
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	//display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	margin-bottom: em(15);
+	font-family: $ffBase;
+	font-weight: $fwBase;
+	line-height: $lhBase / $fzBase;
+	@include font-size($fzBase);
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+input {
+	font-family: $ffBase;
+	font-weight: $fwBase;
+	@include font-size($fzBase)
+}
+
+strong {
+	font-weight: 700;
+}

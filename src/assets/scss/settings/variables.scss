@@ -1,0 +1,65 @@
+// variables //
+
+// Layout
+
+// Typography
+// -------------------------
+
+	// family
+	$ffBase: 		-apple-system, BlinkMacSystemFont,
+                    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                    "Fira Sans", "Droid Sans", "Helvetica Neue",
+                    sans-serif;
+	$ffSecondary: 	-apple-system, BlinkMacSystemFont,
+                    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                    "Fira Sans", "Droid Sans", "Helvetica Neue",
+                    sans-serif;
+	$alpha: 		'Old Standard TT', Sans-Serif;
+	$beta: 			'Old Standard TT', Sans-Serif;
+	$gamma: 		'Old Standard TT', Sans-Serif;
+	$delta: 		'Old Standard TT', Sans-Serif;
+
+	// style
+	$fzBase: 			16 !default;
+	$lhBase: 			19 !default;
+	$fwBase: 			100;
+
+// Colours
+	$primaryColour: 	#c41230;
+	$secondaryColour: 	#b2b2b2;
+
+// Margins
+// -------------------------
+
+	$lMargBottom: 80px;
+	$mMargBottom: 50px;
+	$sMargBottom: 20px;
+
+	$lMargBottomM: 40px;
+	$mMargBottomM: 25px;
+	$sMargBottomM: 10px;
+
+
+// Padding
+// -------------------------
+
+	$padVert: 20;
+
+// Headings
+// -------------------------
+
+	$headings: 							'.alpha','.beta','.gamma','.delta';
+	$headingSizes: 					    50,40,30,20;
+	$headingFamilies: 					$alpha, $beta, $gamma, $delta;
+	$headingColors: 					inherit , inherit, inherit, inherit;
+	$headingMargins: 					15,15,15,15;
+	$headingLineHeights: 				1.2,1.2,1.2,1.2;
+	$headingFontWeights: 				700, 500, 500, 500;
+
+// Breaks
+// -------------------------
+	$xs: 320px;
+	$s: 480px;
+	$m: 640px;
+	$l: 960px;
+	$xl: 1100px;

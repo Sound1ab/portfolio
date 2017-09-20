@@ -1,0 +1,8 @@
+[pLazy=loading] {
+  opacity: 0;
+}
+
+[pLazy=loaded] {
+  opacity: 1;
+  transition: all 0.5s;
+}
