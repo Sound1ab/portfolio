@@ -1,7 +1,7 @@
 <template>
 	<section class="home">
 		<heading></heading>
-		home
+		contact
 	</section>
 </template>
 
