@@ -1,39 +1,31 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex);
 
-function grabData (page) {
-	return import(`@/assets/data/${page}.json`);
-}
+// Modules
+import {loadLocalData} from "./loadlocaldata";
+import {loadBlogData} from "./loadBlogdata";
 
 export default new Vuex.Store({
+	plugins: [createPersistedState()],
 	state: {
-		data: {}
+		showMenu: false
 	},
 	actions: {
-		LOAD_DATA({commit}, page) {
-			grabData('general')
-				.then(appData => {
-					return appData
-				})
-				.then((appData) => {
-					grabData(page).then(bundleData => {
-						let consolidatedObj = {
-							...appData,
-							...bundleData,
-						};
-						commit('LOAD_DATA', consolidatedObj);
-					});
-				})
+		SHOW_BURGER_MENU ({commit}, val) {
+			commit('SHOW_BURGER_MENU', val);
 		},
 	},
 	mutations: {
-		LOAD_DATA(state, payload) {
-			// if (payload.localStore) {
-			// 	localStorage.setItem('lang', JSON.stringify(payload.language));
-			// }
-			state.data = payload;
+		SHOW_BURGER_MENU (state, payload) {
+			if (payload) {
+				document.body.style.overflow = "hidden";
+			} else {
+				document.body.style.overflow = "auto";
+			}
+			state.showMenu = payload;
 		},
 	},
 	getters: {
@@ -42,5 +34,14 @@ export default new Vuex.Store({
 				return state.data[section];
 			}
 		},
+		retrieveBlogPost: (state) => (id) => {
+			return state.data.blog.filter(element => {
+				return id === element.id;
+			})
+		},
 	},
+	modules: {
+		localData: loadLocalData,
+		blogData: loadBlogData,
+	}
 });

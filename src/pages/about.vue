@@ -1,6 +1,5 @@
 <template>
 	<section class="home">
-		<heading></heading>
 		about
 	</section>
 </template>

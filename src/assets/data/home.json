@@ -1,3 +1,6 @@
 {
-	"test": "home"
+	"text_hero": {
+		"line_one": "HELLO MY NAME IS MAX",
+		"line_two": "I'm a frontend developer in Vienna, making things on the web."
+	}
 }

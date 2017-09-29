@@ -14,20 +14,40 @@
                     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
                     "Fira Sans", "Droid Sans", "Helvetica Neue",
                     sans-serif;
-	$alpha: 		'Old Standard TT', Sans-Serif;
-	$beta: 			'Old Standard TT', Sans-Serif;
-	$gamma: 		'Old Standard TT', Sans-Serif;
-	$delta: 		'Old Standard TT', Sans-Serif;
+	$alpha: 		'Merriweather', serif;
+	$beta: 			'Merriweather', serif;
+	$gamma: 		'Merriweather', serif;
+	$delta: 		'Merriweather', serif;
+	$epsilon: 		-apple-system, BlinkMacSystemFont,
+                    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                    "Fira Sans", "Droid Sans", "Helvetica Neue",
+                    sans-serif;
+	$zeta: 			-apple-system, BlinkMacSystemFont,
+                    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                    "Fira Sans", "Droid Sans", "Helvetica Neue",
+                    sans-serif;
+	$eta: 			-apple-system, BlinkMacSystemFont,
+                    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                    "Fira Sans", "Droid Sans", "Helvetica Neue",
+                    sans-serif;
+	$theta: 		-apple-system, BlinkMacSystemFont,
+                    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                    "Fira Sans", "Droid Sans", "Helvetica Neue",
+                    sans-serif;
 
 	// style
-	$fzBase: 			16 !default;
-	$lhBase: 			19 !default;
-	$fwBase: 			100;
+	$fzBase: 			20 !default;
+	$lhBase: 			35 !default;
+	$fwBase: 			300;
 
 // Colours
-	$primaryColour: 	#c41230;
-	$secondaryColour: 	#b2b2b2;
+	$primaryColour: 	#021C1E;
+	$secondaryColour: 	#004445;
+	$tertiaryColour: 	#2C7873;
+	$quinaryColour: 	#6FB98F;
 
+	$lightGrey: 		#909090;
+	$darkGrey:			#4b4b4b;
 // Margins
 // -------------------------
 
@@ -39,22 +59,25 @@
 	$mMargBottomM: 25px;
 	$sMargBottomM: 10px;
 
+// Generic sizes
+// -------------------------
+	$column: 660px;
+	$mobileContainer: 90%;
 
 // Padding
 // -------------------------
-
 	$padVert: 50;
 
 // Headings
 // -------------------------
 
-	$headings: 							'.alpha','.beta','.gamma','.delta';
-	$headingSizes: 					    50,40,30,20;
-	$headingFamilies: 					$alpha, $beta, $gamma, $delta;
-	$headingColors: 					inherit , inherit, inherit, inherit;
-	$headingMargins: 					15,15,15,15;
-	$headingLineHeights: 				1.2,1.2,1.2,1.2;
-	$headingFontWeights: 				700, 500, 500, 500;
+	$headings: 							'.alpha','.beta','.gamma','.delta', '.epsilon', '.zeta', '.eta', 										'.theta';
+	$headingSizes: 					    60,40,30,20,60,40,30,20;
+	$headingFamilies: 					$alpha, $beta, $gamma, $delta, $epsilon, $zeta, $eta, $theta;
+	$headingColors: 					inherit , inherit, inherit, inherit, inherit , inherit, inherit, 										inherit;
+	$headingMargins: 					15,15,15,15,15,15,15,15;
+	$headingLineHeights: 				1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2;
+	$headingFontWeights: 				700, 500, 500, 500, 700, 700, 400, 700;
 
 // Breaks
 // -------------------------
@@ -62,4 +85,4 @@
 	$s: 480px;
 	$m: 640px;
 	$l: 960px;
-	$xl: 1100px;
+	$xl: 1200px;

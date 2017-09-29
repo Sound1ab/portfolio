@@ -1,3 +1,65 @@
 {
-	"test": "test"
+	"blog": [
+		{
+			"id": "1",
+			"title": "Nam cursus porta tempor",
+			"published": "August 17th 2017",
+			"category": "CODE",
+			"short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus porta tempor. Morbi scelerisque velit libero...",
+			"sections": [
+				{
+					"type": "introduction",
+					"copy": "Aliquam ac pretium ipsum. Nam sed dignissim eros, at fermentum arcu. Nam in nisi dui. Praesent efficitur mi mauris."
+				},
+				{
+					"type": "tldr",
+					"copy": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper urna."
+				},
+				{
+					"type": "paragraph",
+					"copy": "orem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus porta tempor. Morbi scelerisque velit libero, sed malesuada augue egestas sit amet. Aliquam ac pretium ipsum. Nam sed dignissim eros, at fermentum arcu. Nam in nisi dui. Praesent efficitur mi mauris, quis tempor sem finibus id. Curabitur sed neque in libero gravida dignissim et nec orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper urna. Nunc luctus arcu sit amet lacinia malesuada. Quisque egestas nisl quis ante dapibus laoreet. Nulla facilisis nibh nec lectus faucibus, vitae pretium ipsum sollicitudin. Integer nunc nisl, volutpat in ante in, porttitor placerat tortor."
+				},
+				{
+					"type": "code",
+					"copy": "function style (backgroundImage) {if (!this.style.count || this.style.count === 2) {this.style.count = 0;}if (this.style.count === 0) {this.style.randomNo = Math.ceil(this.randomIntFromInterval(30, 70) / 10) * 10;} else {this.style.randomNo = 100 - this.style.randomNo;}this.style.count++;return {flexBasis: `${this.style.randomNo}%`,}}"
+				},
+				{
+					"type": "image",
+					"src": "projects/project_one/tristar_macbook.jpg"
+				},
+				{
+					"type": "paragraph",
+					"copy": "orem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus porta tempor. Morbi scelerisque velit libero, sed malesuada augue egestas sit amet. Aliquam ac pretium ipsum. Nam sed dignissim eros, at fermentum arcu. Nam in nisi dui. Praesent efficitur mi mauris, quis tempor sem finibus id. Curabitur sed neque in libero gravida dignissim et nec orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper urna. Nunc luctus arcu sit amet lacinia malesuada. Quisque egestas nisl quis ante dapibus laoreet. Nulla facilisis nibh nec lectus faucibus, vitae pretium ipsum sollicitudin. Integer nunc nisl, volutpat in ante in, porttitor placerat tortor."
+				},
+				{
+					"type": "code",
+					"copy": "function style (backgroundImage) {if (!this.style.count || this.style.count === 2) {this.style.count = 0;}if (this.style.count === 0) {this.style.randomNo = Math.ceil(this.randomIntFromInterval(30, 70) / 10) * 10;} else {this.style.randomNo = 100 - this.style.randomNo;}this.style.count++;return {flexBasis: `${this.style.randomNo}%`,}}"
+				},
+				{
+					"type": "paragraph",
+					"copy": "orem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus porta tempor. Morbi scelerisque velit libero, sed malesuada augue egestas sit amet. Aliquam ac pretium ipsum. Nam sed dignissim eros, at fermentum arcu. Nam in nisi dui. Praesent efficitur mi mauris, quis tempor sem finibus id. Curabitur sed neque in libero gravida dignissim et nec orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper urna. Nunc luctus arcu sit amet lacinia malesuada. Quisque egestas nisl quis ante dapibus laoreet. Nulla facilisis nibh nec lectus faucibus, vitae pretium ipsum sollicitudin. Integer nunc nisl, volutpat in ante in, porttitor placerat tortor."
+				},
+				{
+					"type": "code",
+					"copy": "function style (backgroundImage) {if (!this.style.count || this.style.count === 2) {this.style.count = 0;}if (this.style.count === 0) {this.style.randomNo = Math.ceil(this.randomIntFromInterval(30, 70) / 10) * 10;} else {this.style.randomNo = 100 - this.style.randomNo;}this.style.count++;return {flexBasis: `${this.style.randomNo}%`,}}"
+				},
+				{
+					"type": "paragraph",
+					"copy": "orem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus porta tempor. Morbi scelerisque velit libero, sed malesuada augue egestas sit amet. Aliquam ac pretium ipsum. Nam sed dignissim eros, at fermentum arcu. Nam in nisi dui. Praesent efficitur mi mauris, quis tempor sem finibus id. Curabitur sed neque in libero gravida dignissim et nec orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper urna. Nunc luctus arcu sit amet lacinia malesuada. Quisque egestas nisl quis ante dapibus laoreet. Nulla facilisis nibh nec lectus faucibus, vitae pretium ipsum sollicitudin. Integer nunc nisl, volutpat in ante in, porttitor placerat tortor."
+				},
+				{
+					"type": "code",
+					"copy": "function style (backgroundImage) {if (!this.style.count || this.style.count === 2) {this.style.count = 0;}if (this.style.count === 0) {this.style.randomNo = Math.ceil(this.randomIntFromInterval(30, 70) / 10) * 10;} else {this.style.randomNo = 100 - this.style.randomNo;}this.style.count++;return {flexBasis: `${this.style.randomNo}%`,}}"
+				},
+				{
+					"type": "paragraph",
+					"copy": "orem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus porta tempor. Morbi scelerisque velit libero, sed malesuada augue egestas sit amet. Aliquam ac pretium ipsum. Nam sed dignissim eros, at fermentum arcu. Nam in nisi dui. Praesent efficitur mi mauris, quis tempor sem finibus id. Curabitur sed neque in libero gravida dignissim et nec orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris sed semper urna. Nunc luctus arcu sit amet lacinia malesuada. Quisque egestas nisl quis ante dapibus laoreet. Nulla facilisis nibh nec lectus faucibus, vitae pretium ipsum sollicitudin. Integer nunc nisl, volutpat in ante in, porttitor placerat tortor."
+				},
+				{
+					"type": "code",
+					"copy": "function style (backgroundImage) {if (!this.style.count || this.style.count === 2) {this.style.count = 0;}if (this.style.count === 0) {this.style.randomNo = Math.ceil(this.randomIntFromInterval(30, 70) / 10) * 10;} else {this.style.randomNo = 100 - this.style.randomNo;}this.style.count++;return {flexBasis: `${this.style.randomNo}%`,}}"
+				}
+			]
+		}
+	]
 }

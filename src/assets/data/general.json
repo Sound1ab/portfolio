@@ -19,5 +19,75 @@
 				"slug": "/contact"
 			}
 		]
+	},
+	"text_hero": {
+		"line_one": "HELLO MY NAME IS MAX",
+		"line_two": "I'm a frontend developer in Vienna, making things on the web."
+	},
+	"projects": [
+		{
+			"image": "projects/project_1_full_res.jpg",
+			"placeholder": "projects/project_1_opti.jpg",
+			"line_one": "Lorem ipsum dolor sit amet",
+			"line_two": "Nullam eu nulla quis nisi",
+			"id": "project_one"
+		},
+		{
+			"image": "projects/project_2_full_res.jpg",
+			"placeholder": "projects/project_2_opti.jpg",
+			"line_one": "Lorem ipsum dolor sit amet",
+			"line_two": "Nullam eu nulla quis nisi",
+			"id": "project_two"
+		},
+		{
+			"image": "projects/project_3_full_res.jpg",
+			"placeholder": "projects/project_3_opti.jpg",
+			"line_one": "Lorem ipsum dolor sit amet",
+			"line_two": "Nullam eu nulla quis nisi",
+			"id": "project_three"
+		},
+		{
+			"image": "projects/project_4_full_res.jpg",
+			"placeholder": "projects/project_4_opti.jpg",
+			"line_one": "Lorem ipsum dolor sit amet",
+			"line_two": "Nullam eu nulla quis nisi",
+			"id": "project_four"
+		},
+		{
+			"image": "projects/project_5_full_res.jpg",
+			"placeholder": "projects/project_5_opti.jpg",
+			"line_one": "Lorem ipsum dolor sit amet",
+			"line_two": "Nullam eu nulla quis nisi",
+			"id": "project_five"
+		},
+		{
+			"image": "projects/project_6_full_res.jpg",
+			"placeholder": "projects/project_6_opti.jpg",
+			"line_one": "Lorem ipsum dolor sit amet",
+			"line_two": "Nullam eu nulla quis nisi",
+			"id": "project_six"
+		}
+	],
+	"footer": {
+		"links": [
+			{
+				"line_one": "Ⓒ. 2017",
+				"line_two": "Phillip Parker"
+			},
+			{
+				"line_one": "Contact",
+				"line_two": "test@test.com"
+			}
+		],
+		"social": [
+			{
+				"icon": "footer/github.png",
+				"link": "#"
+			},
+			{
+				"icon": "footer/soundcloud.png",
+				"link": "#"
+			}
+		]
 	}
 }

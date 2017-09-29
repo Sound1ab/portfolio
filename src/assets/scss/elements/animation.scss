@@ -4,5 +4,32 @@
 
 [pLazy=loaded] {
   opacity: 1;
-  transition: all 0.5s;
+  transition: all 1s;
+}
+
+.roundin-enter-active {
+	animation: bounce-in .5s;
+}
+.roundin-leave-active {
+	animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+	0% {
+		clip-path: circle(0px at top right);
+	}
+	100% {
+		clip-path: circle(100vh at top right);
+	}
+}
+
+.fade-enter {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all .5s;
+}
+
+.fade-enter-to{
+	opacity: 1;
+	transform: translateY(0);
+	transition: all .5s;
 }

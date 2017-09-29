@@ -1,24 +1,28 @@
 * {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 *:after,
 *:before {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+	font-size: 62.5%;
+	box-sizing: border-box;
 	background-color: #fff;
+	position: relative;
+	min-height: 100%;
 }
 
 body {
-  font-family: $ffBase;
-  font-weight: $fwBase;
-  line-height: $lhBase / $fzBase;
-  @include font-size($fzBase);
-  color: black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: $ffBase;
+	font-weight: $fwBase;
+	line-height: $lhBase / $fzBase;
+	@include font-size($fzBase);
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 137px 0 146px 0;
+	//padding-left: calc(100vw - 100%)
 }

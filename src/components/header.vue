@@ -1,43 +1,62 @@
 <template>
-	<header class="header" v-design-mode>
+	<header
+		class="header"
+		:class="{'fix': fix}"
+	>
 		<div class="header__container">
-			<div class="header__logo">
-				<img :src="fetchImg(storeData.logo)" />
-			</div>
+			<router-link to="/">
+				<div class="header__logo">
+					<img :src="fetchImg(storeData.logo)" />
+				</div>
+			</router-link>
 			<div class="header__nav-items-container">
-				<router-link
-					v-for="element in storeData.nav"
-					:to="element.slug"
-					class="header__router-link"
-					:key="element.title"
-				>
-					<ul class="header__nav-items">
-						<li
-							class="header__nav-item">
-							{{element.title}}
-							<div class="header__border"></div>
-						</li>
-					</ul>
-				</router-link>
+				<ul class="header__nav-items">
+					<li
+						v-for="element in storeData.nav"
+						class="header__nav-item">
+							<router-link
+								:to="element.slug"
+								class="header__router-link"
+								:key="element.title"
+							>
+								{{element.title}}
+								<div class="header__border"></div>
+							</router-link>
+					</li>
+				</ul>
+				<cross></cross>
+				<burger-menu></burger-menu>
 			</div>
 		</div>
 	</header>
 </template>
 
 <script>
+	import { mapState } from 'vuex';
 	export default {
 		name: 'header',
-		props: [''],
+		components: {
+			'Cross': () => import('@/components/burgermenu/cross'),
+			'BurgerMenu': () => import('@/components/burgermenu/burgermenu.vue'),
+		},
 		data () {
-			return {};
+			return {
+				fix: false,
+			};
 		},
 		computed: {
-			storeData () {
-				return this.$store.getters.retrieveData('header')
-			},
+			...mapState({
+				storeData: state => state.localData.data.header,
+			}),
 		},
-		watch: {},
-		methods: {},
+		methods: {
+			'handleScroll': function () {
+				this.fix = document.body.getBoundingClientRect().top <= -137;
+			}
+		},
+		mounted () {
+			window.addEventListener('scroll', this.handleScroll);
+		}
 	};
 </script>
 
@@ -45,14 +64,30 @@
 	@import '~@/assets/scss/settings/variables.scss';
 	@import '~@/assets/scss/tools/mixins.scss';
 	.header {
-		position: relative;
+		position: fixed;
+		left: 0;
+		top: 0;
 		width: 100%;
+		background-color: #fff;
+		background: rgba(255,255,255,1);
+		z-index: 2;
+		transition: all .5s;
+		&.fix {
+			background: rgba(255,255,255,0.7);
+		}
 		&__container {
-			max-width: 1200px;
+			max-width: $xl;
+			@include mq($xl) {
+				max-width: $mobileContainer;
+			}
 			margin: 0 auto;
-			padding: em($padVert) em(20);
+			padding: em($padVert) 0;
 			display: flex;
 			justify-content: space-between;
+			transition: all .5s;
+			.fix & {
+				padding: em(20) 0;
+			}
 		}
 		&__nav-items-container {
 			display: flex;
@@ -63,17 +98,17 @@
 		}
 		&__nav-item {
 			position: relative;
-			&:hover > div {
-				opacity: 1;
-			}
-		}
-		&__router-link {
 			margin-right: em(40);
 			&:last-child {
 				margin-right: 0;
 			}
-			&.router-link-active {
-
+			@include mq($s) {
+				display: none;
+			}
+		}
+		&__router-link {
+			&:hover > div {
+				opacity: 1;
 			}
 		}
 		&__border {
@@ -81,7 +116,7 @@
 			height: 5px;
 			width: 100%;
 			bottom: -10px;
-			background-color: #c41230;
+			background-color: $quinaryColour;
 			opacity: 0;
 			transition: all 1s;
 			.router-link-exact-active & {

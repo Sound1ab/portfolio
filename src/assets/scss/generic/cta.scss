@@ -1,0 +1,11 @@
+.cta {
+	display: inline-block;
+	padding: em(20) em(40);
+	background-color: $secondaryColour;
+	color: #fff;
+	transition: all .5s;
+	cursor: pointer;
+	&:hover {
+		background-color: darken($secondaryColour, 5%)
+	}
+}

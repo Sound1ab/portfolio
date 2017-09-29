@@ -10,13 +10,13 @@ img {
 }
 
 p {
-	margin-bottom: em(15);
+	margin-bottom: em(30);
 	font-family: $ffBase;
 	font-weight: $fwBase;
 	line-height: $lhBase / $fzBase;
 	@include font-size($fzBase);
 	color: black;
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: grayscale;
 }
 

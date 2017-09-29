@@ -8,11 +8,11 @@ h1,h2,h3,h4,h5 {
 
 @for $i from 1 through length($headings) {
 	#{nth($headings,$i)}, .markdown h#{$i} {
-		@include font-size(nth($headingSizes,$i));
+		@include font-size(nth($headingSizes, $i));
 		font-family: #{nth($headingFamilies,$i)};
 		color: #{nth($headingColors,$i)};
-		line-height: (nth($headingLineHeights,$i));
-		font-weight: nth($headingFontWeights,$i);
-		margin-bottom: em(nth($headingMargins,$i),nth($headingSizes,$i));
+		line-height: (nth($headingLineHeights, $i));
+		font-weight: nth($headingFontWeights, $i);
+		margin-bottom: em(nth($headingMargins, $i), nth($headingSizes, $i));
 	}
 }

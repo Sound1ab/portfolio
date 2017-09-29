@@ -1,7 +1,7 @@
 <template>
 	<section class="home">
-		<heading></heading>
-		home
+		<text-hero></text-hero>
+		<image-grid></image-grid>
 	</section>
 </template>
 
@@ -10,13 +10,9 @@
 		name: 'home',
 		props: [''],
 		components: {
-			'Heading': () => import('@/components/header.vue'),
+			'TextHero': () => import('@/components/texthero'),
+			'ImageGrid': () => import('@/components/imagegrid/imagegrid')
 		},
-		data () {
-			return {};
-		},
-		watch: {},
-		methods: {},
 	};
 </script>
 

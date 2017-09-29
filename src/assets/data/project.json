@@ -1,0 +1,21 @@
+{
+	"project_one": {
+		"title": "Nam ac sapien.",
+		"sub_title": "Aliquam quis augue et ex auctor dapibus.",
+		"website": {
+			"title": "Visit website",
+			"url": "#"
+		},
+		"hero_image": "projects/project_one/tristar_macbook.jpg",
+		"sections": [
+			{
+				"type": "image",
+				"src": "projects/project_one/tristar_macbook.jpg"
+			},
+			{
+				"type": "paragraph",
+				"copy": "<p>Phasellus tristique dui eget lorem suscipit viverra. Duis interdum pulvinar urna, in pellentesque felis dapibus eu. Praesent convallis elit eu felis malesuada aliquam. Aliquam quis condimentum nisi. Morbi malesuada ante placerat, ullamcorper nulla sit amet, malesuada lacus. Ut laoreet accumsan malesuada. Ut non lorem ut tellus ornare luctus et vitae lorem. Donec pulvinar pretium metus, nec dignissim dolor laoreet in. Vestibulum vestibulum sit amet sapien sit amet sodales. Sed ultricies pharetra turpis, sit amet elementum neque pulvinar non. In quis imperdiet metus. Proin fermentum dictum ipsum. Phasellus ex eros, volutpat in nunc non, accumsan tempor ex. Duis ut lacus scelerisque, hendrerit metus eu, efficitur eros. Proin pellentesque turpis eu libero porta aliquet.</p><p>Vestibulum pretium tempor metus in tincidunt. Nunc ut nisl a leo sollicitudin fermentum. In interdum arcu venenatis vestibulum posuere. Duis orci nibh, posuere ut feugiat vitae, egestas consectetur massa. Nam sed metus eros. Nunc id leo varius, pharetra urna at, condimentum ipsum. Proin sit amet laoreet lacus. Curabitur ut varius eros, commodo faucibus ipsum. Sed dapibus massa lorem, faucibus tempus justo feugiat at. Quisque tincidunt sapien enim, blandit rutrum risus semper et. Sed elementum dignissim lacus, sed vestibulum eros. Nullam ut orci pellentesque, sagittis risus sed, finibus sapien.</p>"
+			}
+		]
+	}
+}
