@@ -12,14 +12,9 @@
 </template>
 
 <script>
-	import _ from 'lodash';
 	export default {
 		name: 'post-overview',
 		props: ['data'],
-		data () {
-			return {};
-		},
-		watch: {},
 		methods: {
 			filter (data, searchTerm) {
 				let valArr = data.filter(element => {
@@ -53,7 +48,7 @@
 		margin-bottom: $mMargBottom;
 		&__container {
 			max-width: $column;
-			@include mq($xl) {
+			@include mq($column) {
 				max-width: $mobileContainer;
 			}
 			margin: 0 auto;

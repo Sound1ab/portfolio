@@ -6,6 +6,10 @@
 				key="title"
 				:title="title.title"
 				:published="title.publish_date"
+				:hero-image="{
+					main: title.hero_image,
+					opti: title.hero_image_opti,
+				}"
 				:category="title.category">
 			</tiitle>
 			<column v-if="columnData.length > 0" key="column" :sections="columnData"></column>

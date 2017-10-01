@@ -16,11 +16,6 @@
 	import { mapState } from 'vuex';
 	export default {
 		name: 'cross',
-		props: [''],
-		data () {
-			return {};
-		},
-		watch: {},
 		methods: {
 			handleClick () {
 				this.$store.dispatch('SHOW_BURGER_MENU', !this.showMenu);

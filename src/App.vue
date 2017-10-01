@@ -26,6 +26,7 @@
 			loadData () {
 				this.$store.dispatch('LOAD_LOCAL_DATA', 'general');
 				this.$store.dispatch('LOAD_BLOG_DATA');
+				this.$store.dispatch('LOAD_PROJECT_DATA');
 			},
 		},
 		created () {

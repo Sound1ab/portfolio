@@ -6,7 +6,8 @@ Vue.use(Vuex);
 
 // Modules
 import {loadLocalData} from "./loadlocaldata";
-import {loadBlogData} from "./loadBlogdata";
+import {loadBlogData} from "./loadblogdata";
+import {loadProjectData} from "./loadprojectdata";
 
 export default new Vuex.Store({
 	plugins: [createPersistedState()],
@@ -43,5 +44,6 @@ export default new Vuex.Store({
 	modules: {
 		localData: loadLocalData,
 		blogData: loadBlogData,
+		projectData: loadProjectData,
 	}
 });

@@ -1,6 +1,12 @@
 <template>
 	<section class="blog">
-		<tiitle :title="'Blog'"></tiitle>
+		<tiitle
+			:title="'Blog'"
+			:hero-image="{
+				main: 'http://api.phillipparker.tech/wp-content/uploads/2017/09/Photo17_17.jpg',
+				opti: 'http://api.phillipparker.tech/wp-content/uploads/2017/09/Photo17_17.jpg'
+			}"
+		></tiitle>
 		<transition-group name="fade">
 			<post-overview
 				v-for="(element, index) in blogs"

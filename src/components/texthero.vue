@@ -1,9 +1,12 @@
 <template>
 	<section class="text-hero">
 		<div class="text-hero__container">
-			<p class="text-hero__line-one">{{storeData.line_one}}</p>
-			<h1 class="text-hero__line-two alpha">{{storeData.line_two}}</h1>
+			<div >
+				<p class="text-hero__line-one">{{storeData.line_one}}</p>
+				<h1 class="text-hero__line-two alpha">{{storeData.line_two}}</h1>
+			</div>
 		</div>
+
 	</section>
 </template>
 
@@ -31,7 +34,12 @@
 				max-width: $mobileContainer;
 			}
 			margin: 0 auto;
-			padding: em(200) em(50);
+			/*padding: em(200) em(50);*/
+			height: calc(100vh);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 		&__line-one {
 			font-weight: bold;

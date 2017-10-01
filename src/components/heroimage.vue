@@ -1,6 +1,6 @@
 <template>
 	<div class="hero-image">
-		<img class="hero-image__image" :src="fetchImg(src)" />
+		<img class="hero-image__image" :src="src" />
 	</div>
 </template>
 
@@ -8,11 +8,6 @@
 	export default {
 		name: 'hero-image',
 		props: ['src'],
-		data () {
-			return {};
-		},
-		watch: {},
-		methods: {},
 		computed: {
 			storeData () {
 				return this.$store.getters.retrieveData('')

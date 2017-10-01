@@ -1,37 +1,84 @@
 <template>
 	<section class="project">
 		<tiitle
-			:title="storeData.title"
-			:subTitle="storeData.sub_title"
+			:title="title.title"
+			:subTitle="title.sub_title"
+			:hero-image="{
+				main: title.hero_image,
+				opti: title.hero_image_opti,
+			}"
 			:link="{
-				title: storeData.website.title,
-				url: storeData.website.url
+				title: 'View the site',
+				url: title.website_url
 			}">
 		</tiitle>
-		<hero-image :src="storeData.hero_image"></hero-image>
-		<column :sections="storeData.sections"></column>
+		<column :sections="columnData"></column>
 		<image-grid></image-grid>
 	</section>
 </template>
 
 <script>
+	import { mapState } from 'vuex';
 	export default {
 		name: 'Project',
 		props: [''],
 		components: {
 			'ImageGrid': () => import('@/components/imagegrid/imagegrid'),
-			'HeroImage': () => import('@/components/heroimage'),
 			'Tiitle': () => import('@/components/title'),
 			'Column': () => import('@/components/column')
 		},
-		data () {
-			return {};
+		methods: {
+			filter (data, searchTerm) {
+				let valArr = data.filter(element => {
+					return element.acf_fc_layout === searchTerm
+				});
+				return valArr[0]
+			},
 		},
-		watch: {},
-		methods: {},
 		computed: {
-			storeData () {
-				return this.$store.getters.retrieveData(this.$route.params.id)
+			...mapState({
+				projects: state => state.projectData.projects
+			}),
+			columnData () {
+				let val = [];
+				val = this.project.filter(element => {
+					return element.acf_fc_layout !== 'title'
+						&& element.acf_fc_layout !== 'id'
+						&& element.acf_fc_layout !== 'hero_image';
+				});
+				return val.length > 0 ? val : [];
+			},
+			title () {
+				let val = {};
+				if (this.project.length > 0) {
+					val = this.filter(this.project, 'title');
+				}
+				return Object.keys(val).length > 0 ? val : {};
+			},
+			heroImage () {
+				let val = {};
+				if (this.project.length > 0) {
+					val = this.filter(this.project, 'hero_image');
+				}
+				return Object.keys(val).length > 0 ? val : {};
+			},
+			project () {
+				let val = [];
+				if (this.projects.length > 0) {
+					for (let i = 0; i < this.projects.length; i++) {
+						let filteredArr = this.projects[i].filter(element => {
+							if (element.id) {
+								return element.id == this.$route.params.id;
+							} else {
+								return false;
+							}
+						});
+						if (filteredArr.length > 0) {
+							val = this.projects[i];
+						}
+					}
+				}
+				return val;
 			},
 		},
 	};

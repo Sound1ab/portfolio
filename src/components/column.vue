@@ -1,4 +1,4 @@
-<template>
+ <template>
 	<div class="column" ref="parentNode"></div>
 </template>
 
@@ -17,10 +17,6 @@
 	export default {
 		name: 'Column',
 		props: ['sections'],
-		data () {
-			return {};
-		},
-		watch: {},
 		methods: {
 			setupBaseElements () {
 				return {
@@ -61,15 +57,19 @@
 				let childNode = this.createNode(this.createElement.types[element.type]);
 				this.applyClasses(this.classes[element.type], childNode);
 				if (element.type === 'image') {
-					let imgNode = this.createNode('img');
-					this.applyClasses(['column__image'], imgNode);
-					imgNode.src = this.fetchImg(element.value);
-					childNode.appendChild(imgNode);
+					if (element.value) {
+						let imgNode = this.createNode('img');
+						this.applyClasses(['column__image'], imgNode);
+						imgNode.src = element.value;
+						childNode.appendChild(imgNode);
+					}
 				} else if (element.type === 'code') {
 					childNode.innerHTML = this.setupCodeBlock(
 						beautify(element.value, {index_size: 1, wrap_line_length: 40})
 					);
 					childNode.setAttribute('ref', 'childNode');
+				} else if (element.type === 'paragraph') {
+					childNode.innerHTML = this.stripHTML(element.value);
 				} else {
 					childNode.innerHTML = element.value
 				}
@@ -92,7 +92,7 @@
 			this.sections.forEach(element => {
 				this.createElement({
 					type: element.acf_fc_layout,
-					value: this.stripHTML(element[element.acf_fc_layout])
+					value: element[element.acf_fc_layout]
 				})
 			})
 		}
@@ -129,6 +129,7 @@
 			width: 100%;
 			left: 0;
 			background-color: #1d262f;
+			margin-bottom: em(15);
 		}
 		&__code-block {
 			margin: 0 auto!important;

@@ -28,10 +28,6 @@
 	import { mapState } from 'vuex';
 	export default {
 		name: 'BurgerMenu',
-		props: [''],
-		data () {
-			return {};
-		},
 		computed: {
 			...mapState({
 				storeData: state => state.localData.data.header,

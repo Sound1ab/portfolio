@@ -51,7 +51,7 @@
 		},
 		methods: {
 			'handleScroll': function () {
-				this.fix = document.body.getBoundingClientRect().top <= -137;
+				this.fix = document.body.getBoundingClientRect().top.toFixed() < 0;
 			}
 		},
 		mounted () {
@@ -69,11 +69,12 @@
 		top: 0;
 		width: 100%;
 		background-color: #fff;
-		background: rgba(255,255,255,1);
+		background: rgba(255,255,255,0.5);
 		z-index: 2;
 		transition: all .5s;
+		box-shadow: 0px 6px 9px 0px rgba(0,0,0,0.15);
 		&.fix {
-			background: rgba(255,255,255,0.7);
+			background: rgba(255,255,255,0.5);
 		}
 		&__container {
 			max-width: $xl;
@@ -81,7 +82,7 @@
 				max-width: $mobileContainer;
 			}
 			margin: 0 auto;
-			padding: em($padVert) 0;
+			padding: em(40) 0;
 			display: flex;
 			justify-content: space-between;
 			transition: all .5s;
