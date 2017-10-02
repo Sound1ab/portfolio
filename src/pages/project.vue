@@ -5,7 +5,11 @@
 			:subTitle="title.sub_title"
 			:hero-image="{
 				main: title.hero_image,
-				opti: title.hero_image_opti,
+				opti: convertCloudinary({
+					src: title.hero_image,
+					effect: 'blur',
+					amount: 2000
+				})
 			}"
 			:link="{
 				title: 'View the site',

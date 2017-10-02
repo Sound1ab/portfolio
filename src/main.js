@@ -12,6 +12,7 @@ import VueProgressBar from 'vue-progressbar'
 
 // Mixin imports
 import {fetchImg} from './mixins/fetchImg';
+import {convertCloudinary} from './mixins/convertcloudinary';
 
 // Directive imports
 import designMode from './directives/designMode';
@@ -35,6 +36,7 @@ Vue.use(VueProgressBar, options)
 
 // Mixin globals
 Vue.mixin(fetchImg);
+Vue.mixin(convertCloudinary);
 
 // Directive globals
 Vue.directive('design-mode', designMode());

@@ -3,8 +3,12 @@
 		<tiitle
 			:title="'Blog'"
 			:hero-image="{
-				main: 'http://api.phillipparker.tech/wp-content/uploads/2017/09/Photo17_17.jpg',
-				opti: 'http://api.phillipparker.tech/wp-content/uploads/2017/09/Photo17_17.jpg'
+				main: 'http://res.cloudinary.com/dwdoisdas/image/upload/v1506940493/Photo29_29_rlwfsy.jpg',
+				opti: convertCloudinary({
+					src: 'http://res.cloudinary.com/dwdoisdas/image/upload/v1506940493/Photo29_29_rlwfsy.jpg',
+					effect: 'blur',
+					amount: 2000
+				})
 			}"
 		></tiitle>
 		<transition-group name="fade">

@@ -108,6 +108,7 @@
 			}
 		}
 		&__router-link {
+			color: #000;
 			&:hover > div {
 				opacity: 1;
 			}

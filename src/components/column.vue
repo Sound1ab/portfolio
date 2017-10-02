@@ -48,7 +48,7 @@
 					`;
 			},
 			stripHTML (str) {
-				return str.replace(/<(?:.|\n)*?>/gm, '');
+				return str.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");
 			},
 			createElement (element) {
 				if (!this.createElement.types) {
