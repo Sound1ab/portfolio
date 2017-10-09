@@ -68,8 +68,6 @@
 						beautify(element.value, {index_size: 1, wrap_line_length: 40})
 					);
 					childNode.setAttribute('ref', 'childNode');
-				} else if (element.type === 'paragraph') {
-					childNode.innerHTML = this.stripHTML(element.value);
 				} else {
 					childNode.innerHTML = element.value
 				}
@@ -104,6 +102,9 @@
 	@import '~@/assets/scss/tools/mixins.scss';
 	.column {
 		width: 100%;
+		& iframe {
+			width: 100%;
+		}
 		&__introduction {
 			max-width: $column;
 			margin: 0 auto em(15) auto;

@@ -19,7 +19,7 @@ export const loadBlogData = {
 							return [...accumulator, [
 								...element.acf.blog,
 								{acf_fc_layout: 'id', id: element.id}
-							]];
+							]];3
 						} else {
 							return accumulator;
 						}

@@ -71,6 +71,9 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			list-style-type: none;
+			margin-bottom: 0;
+			padding-left: 0;
 		}
 		&__nav-item {
 			transition: all .5s;

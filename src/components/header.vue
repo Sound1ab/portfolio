@@ -96,6 +96,9 @@
 		}
 		&__nav-items {
 			display: flex;
+			list-style-type: none;
+			margin-bottom: 0;
+			padding-left: 0;
 		}
 		&__nav-item {
 			position: relative;
