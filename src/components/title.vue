@@ -53,6 +53,7 @@
 
 <script>
 	let Vibrant = require('node-vibrant');
+	import axios from 'axios';
 	export default {
 		name: 'Title',
 		props: {
@@ -109,17 +110,27 @@
 				return "#" + padZero(r) + padZero(g) + padZero(b);
 			},
 			getAverageRGB(url) {
-				let img = new Image();
-				img.onload = () => {
-					var vibrant = new Vibrant(img);
-					vibrant.getPalette().then(res => {
-						let swatch = 'Vibrant';
-						this.publishedColor = this.invertColor(res[swatch]._rgb, true);
-						this.textColor = `rgb(${res[swatch]._rgb[0]},${res[swatch]._rgb[1]},${res[swatch]._rgb[2]})`;
-					});
-				};
-				img.src = url + '?' + new Date().getTime();
-				img.setAttribute('crossOrigin', '');
+				axios.get(url, {
+					responseType: 'arraybuffer',
+				}).then(res => {
+					let image = btoa(
+						new Uint8Array(res.data)
+							.reduce((data, byte) => data + String.fromCharCode(byte), '')
+					);
+					let dataUri = `data:${res.headers['content-type'].toLowerCase()};base64,${image}`;
+					let img = new Image();
+					img.onload = () => {
+						var vibrant = new Vibrant(img);
+						vibrant.getPalette().then(res => {
+							let swatch = 'Vibrant';
+							this.publishedColor = this.invertColor(res[swatch]._rgb, true);
+							this.textColor = `rgb(${res[swatch]._rgb[0]},${res[swatch]._rgb[1]},${res[swatch]._rgb[2]})`;
+						});
+					};
+					img.src = dataUri;
+				}).catch(err => {
+					console.log('error', err)
+				})
 			},
 		},
 		computed: {

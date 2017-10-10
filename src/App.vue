@@ -5,7 +5,7 @@
 		<transition name="fade">
 			<router-view></router-view>
 		</transition>
-		<footing></footing>
+		<!--<footing></footing>-->
 	</div>
 </template>
 
