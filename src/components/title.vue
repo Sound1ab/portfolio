@@ -18,20 +18,20 @@
 				</h1>
 				<h4
 					v-if="subTitle"
-					class="titles__sub-title delta"
+					class="titles__sub-title eta"
 					:class="[textColor ? 'show' : '']"
 					:style="{color: textColor}"
 					v-html="subTitle">
 				</h4>
 				<div v-if="published">
 					<h4
-						class="titles__published delta"
+						class="titles__published eta"
 						:class="[publishedColor ? 'show' : '']"
 						:style="{color: publishedColor}"
 					>
 						{{published}} -
 					</h4>
-					<h4 class="titles__category delta"
+					<h4 class="titles__category eta"
 						:class="[publishedColor ? 'show' : '']"
 						:style="{color: publishedColor}"
 					>
@@ -162,6 +162,7 @@
 		background-position: center;
 		background-size: cover;
 		margin-bottom: em(50);
+		height: 1000px;
 		&__container {
 			max-width: $xl;
 			margin: 0 auto;

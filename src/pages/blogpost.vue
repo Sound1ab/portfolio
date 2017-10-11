@@ -1,5 +1,6 @@
 <template>
-	<section class="blog-post">
+	<section class="blog-post" :key="$route.path">
+
 		<transition-group name="fade">
 			<tiitle
 				v-if="Object.keys(title).length > 0"
@@ -17,6 +18,7 @@
 				:category="title.category">
 			</tiitle>
 			<column v-if="columnData.length > 0" key="column" :sections="columnData"></column>
+			<more-blogs :data="blogs" key="more-blogs"></more-blogs>
 		</transition-group>
 	</section>
 </template>
@@ -24,12 +26,14 @@
 <script>
 	import { mapState } from 'vuex';
 	import _ from 'lodash';
+	import Tiitle from '@/components/title';
 	export default {
 		name: 'BlogPost',
 		props: [''],
 		components: {
-			'Tiitle': () => import('@/components/title'),
-			'Column': () => import('@/components/column')
+			Tiitle,
+			'Column': () => import('@/components/column'),
+			'MoreBlogs': () => import('@/components/moreblogs'),
 		},
 		watch: {},
 		methods: {

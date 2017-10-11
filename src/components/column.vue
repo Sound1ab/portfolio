@@ -102,28 +102,33 @@
 	@import '~@/assets/scss/tools/mixins.scss';
 	.column {
 		width: 100%;
+		margin-bottom: em(50);
 		& iframe {
 			width: 100%;
 		}
 		&__introduction {
 			max-width: $column;
 			margin: 0 auto em(15) auto;
-			@include mq(660) {
+			@include mq($column) {
 				max-width: $mobileContainer;
 			}
 		}
 		&__tldr {
 			max-width: $column;
 			margin: 0 auto em(15) auto;
-			@include mq(660) {
+			@include mq($column) {
 				max-width: $mobileContainer;
 			}
 		}
 		&__paragraph {
 			max-width: $column;
 			margin: 0 auto em(15) auto;
-			@include mq(660) {
+			@include mq($column) {
 				max-width: $mobileContainer;
+			}
+			& img {
+				display: block;
+				margin: 0 auto;
 			}
 		}
 		&__code {

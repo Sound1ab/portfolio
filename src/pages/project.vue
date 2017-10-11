@@ -1,21 +1,12 @@
 <template>
 	<section class="project">
-		<tiitle
+		<project-title
 			:title="title.title"
-			:subTitle="title.sub_title"
-			:hero-image="{
-				main: title.hero_image,
-				opti: convertCloudinary({
-					src: title.hero_image,
-					effect: 'blur',
-					amount: 2000
-				})
-			}"
-			:link="{
-				title: 'View the site',
-				url: title.website_url
-			}">
-		</tiitle>
+			:sub-title="title.sub_title"
+			:url="title.website_url"
+		>
+		</project-title>
+		<hero-image :src="title.hero_image"></hero-image>
 		<column :sections="columnData"></column>
 		<image-grid></image-grid>
 	</section>
@@ -23,12 +14,14 @@
 
 <script>
 	import { mapState } from 'vuex';
+	import Tiitle from '@/components/title';
 	export default {
 		name: 'Project',
 		props: [''],
 		components: {
 			'ImageGrid': () => import('@/components/imagegrid/imagegrid'),
-			'Tiitle': () => import('@/components/title'),
+			'HeroImage': () => import('@/components/heroimage'),
+			'ProjectTitle': () => import('@/components/projecttitle'),
 			'Column': () => import('@/components/column')
 		},
 		methods: {

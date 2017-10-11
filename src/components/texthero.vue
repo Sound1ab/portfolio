@@ -1,7 +1,7 @@
 <template>
 	<section class="text-hero">
 		<div class="text-hero__container">
-			<div >
+			<div class="text-hero__copy-container">
 				<p class="text-hero__line-one">{{storeData.line_one}}</p>
 				<h1 class="text-hero__line-two alpha">{{storeData.line_two}}</h1>
 			</div>
@@ -40,6 +40,9 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+		}
+		&__copy-container {
+			max-width: $xl;
 		}
 		&__line-one {
 			font-weight: bold;

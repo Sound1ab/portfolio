@@ -4,8 +4,12 @@
 		class="image"
 		:style="style()"
 		v-progressive-image="{
-					src: title.hero_image,
-					placeholder: title.hero_image_opti,
+					src: title.tile_image,
+					placeholder: convertCloudinary({
+						src: title.tile_image,
+						effect: 'blur',
+						amount: 2000
+					}),
 					background: true
 				}"
 	>

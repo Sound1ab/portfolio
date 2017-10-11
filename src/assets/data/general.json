@@ -68,6 +68,32 @@
 			"id": "project_six"
 		}
 	],
+	"about": {
+		"copy": "Hey, I'm Phill, a front-end develop in London. I work at <a href=\"https://www.yourfavouritestory.com/\">Your Favourite Story</a> building cool things on the web. Have a read of my blog to see what I've been up to lately and make sure to <a href=\"http://soundcloud.com/mathsnotmath\">check out my mixtape fam.</a>"
+	},
+	"contact": {
+		"fields": [
+			{
+				"title": "What's your name?",
+				"model": "name",
+				"type": "input"
+			},
+			{
+				"title": "Your email address?",
+				"model": "email",
+				"type": "input"
+			},
+			{
+				"title": "What's on your mind?",
+				"model": "text",
+				"type": "textfield"
+			}
+		],
+		"cta": {
+			"title": "Send Message",
+			"url": "#"
+		}
+	},
 	"footer": {
 		"links": [
 			{
@@ -76,17 +102,17 @@
 			},
 			{
 				"line_one": "Contact",
-				"line_two": "test@test.com"
+				"line_two": "lol@dontcontactme.com"
 			}
 		],
 		"social": [
 			{
 				"icon": "footer/github.png",
-				"link": "#"
+				"url": "http://www.soundcloud.com/mathsnotmath"
 			},
 			{
 				"icon": "footer/soundcloud.png",
-				"link": "#"
+				"url": "https://github.com/Sound1ab"
 			}
 		]
 	}

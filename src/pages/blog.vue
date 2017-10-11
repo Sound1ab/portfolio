@@ -23,10 +23,11 @@
 
 <script>
 	import { mapState } from 'vuex';
+	import Tiitle from '@/components/title';
 	export default {
 		name: 'Blog',
 		components: {
-			'Tiitle': () => import('@/components/title'),
+			Tiitle,
 			'PostOverview': () => import('@/components/postoverview'),
 		},
 		computed: mapState({

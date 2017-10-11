@@ -24,6 +24,7 @@
 								:to="element.slug"
 								class="header__router-link"
 								:key="element.title"
+								:exact="element.title === 'Home'"
 							>
 								{{element.title}}
 								<div class="header__border"></div>
@@ -103,6 +104,7 @@
 		&__logo {
 			position: relative;
 			width: 82px;
+			height: 50px;
 		}
 		&__nav-items {
 			display: flex;
@@ -135,6 +137,9 @@
 			opacity: 0;
 			transition: all 1s;
 			.router-link-exact-active & {
+				opacity: 1;
+			}
+			.router-link-active & {
 				opacity: 1;
 			}
 		}

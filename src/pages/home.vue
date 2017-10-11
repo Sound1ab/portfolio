@@ -6,11 +6,12 @@
 </template>
 
 <script>
+	import TextHero from '@/components/texthero';
 	export default {
 		name: 'home',
 		props: [''],
 		components: {
-			'TextHero': () => import('@/components/texthero'),
+			TextHero,
 			'ImageGrid': () => import('@/components/imagegrid/imagegrid')
 		},
 	};

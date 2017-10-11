@@ -21,11 +21,12 @@
 	@import '~@/assets/scss/tools/mixins.scss';
 	.hero-image {
 		width: 100%;
+		margin-bottom: em(50);
 		&__image {
 			margin: 0 auto;
 			display: block;
-			max-width: $xl;
-			@include mq($xl) {
+			max-width: $column;
+			@include mq($column) {
 				max-width: $mobileContainer;
 			}
 		}

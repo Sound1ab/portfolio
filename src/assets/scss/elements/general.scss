@@ -27,10 +27,21 @@ ul {
 	padding-left: 50px;
 }
 
+textarea,
 input {
 	font-family: $ffBase;
 	font-weight: $fwBase;
-	@include font-size($fzBase)
+	@include font-size($fzBase);
+	border: 1px solid $tertiaryColour;
+	width: 100%;
+	height: 45px;
+	border-radius: 5px;
+	padding: em(15);
+	&:focus {
+		outline: $quinaryColour auto 5px;
+		border:1px solid $quinaryColour;
+		box-shadow: 0 0 10px $quinaryColour;
+	}
 }
 
 strong {

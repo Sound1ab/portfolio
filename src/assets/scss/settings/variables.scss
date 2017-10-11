@@ -72,11 +72,11 @@
 // -------------------------
 
 	$headings: 							'.alpha','.beta','.gamma','.delta', '.epsilon', '.zeta', '.eta', 										'.theta';
-	$headingSizes: 					    60,40,30,20,60,40,30,20;
+	$headingSizes: 					    60,40,26,20,60,40,26,20;
 	$headingFamilies: 					$alpha, $beta, $gamma, $delta, $epsilon, $zeta, $eta, $theta;
 	$headingColors: 					inherit , inherit, inherit, inherit, inherit , inherit, inherit, 										inherit;
 	$headingMargins: 					15,15,15,15,15,15,15,15;
-	$headingLineHeights: 				1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2;
+	$headingLineHeights: 				1.2,1.2,1.2,1.2,1.2,1.2,1.6,1.2;
 	$headingFontWeights: 				700, 500, 500, 500, 700, 700, 400, 700;
 
 // Breaks

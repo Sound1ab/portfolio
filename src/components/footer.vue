@@ -9,7 +9,7 @@
 			</div>
 			<div class="footer__section">
 				<div class="footer__links social" v-for="element in storeData.social">
-					<img class="footer__icon" :src="fetchImg(element.icon)" />
+					<a :href="element.url" target="_blank" rel="noopener"><img class="footer__icon" :src="fetchImg(element.icon)" /></a>
 				</div>
 			</div>
 		</div>
@@ -48,6 +48,9 @@
 		&__section {
 			display: flex;
 			padding: em(50) em(10);
+			@include mq($s) {
+				padding: em(35) em(10);
+			}
 		}
 		&__copy {
 			display: block;

@@ -1,11 +1,11 @@
 <template>
-	<div id="app">
+	<div id="app" >
 		<vue-progress-bar></vue-progress-bar>
 		<heading></heading>
 		<transition name="fade">
 			<router-view></router-view>
 		</transition>
-		<!--<footing></footing>-->
+		<footing></footing>
 	</div>
 </template>
 
