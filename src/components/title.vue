@@ -162,7 +162,7 @@
 		background-position: center;
 		background-size: cover;
 		margin-bottom: em(50);
-		height: 1000px;
+		height: 100vh;
 		&__container {
 			max-width: $xl;
 			margin: 0 auto;
