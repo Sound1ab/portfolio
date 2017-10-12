@@ -69,7 +69,7 @@
 		}
 	],
 	"about": {
-		"copy": "Hey, I'm Phill, a front-end develop in London. I work at <a href=\"https://www.yourfavouritestory.com/\">Your Favourite Story</a> building cool things on the web. Have a read of my blog to see what I've been up to lately and make sure to <a href=\"http://soundcloud.com/mathsnotmath\">check out my mixtape fam.</a>"
+		"copy": "Hey, I'm Phill, a front-end developer in London. I work at <a href=\"https://www.yourfavouritestory.com/\">Your Favourite Story</a> building cool things on the web. Have a read of my blog to see what I've been up to and make sure to <a href=\"http://soundcloud.com/mathsnotmath\">check out my mixtape fam.</a>"
 	},
 	"contact": {
 		"fields": [

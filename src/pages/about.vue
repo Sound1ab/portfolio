@@ -58,8 +58,12 @@
 			display: flex;
 			justify-content: space-around;
 			align-items: stretch;
+			flex-direction: row;
 			@include mq(800) {
 				max-width: $mobileContainer;
+			}
+			@include mq($m) {
+				flex-direction: column;
 			}
 		}
 		&__picture-container {
@@ -69,6 +73,9 @@
 			flex: 5 1 auto;
 			padding: em(10) em(10) em(10) em(30);
 			margin-bottom: 0;
+			@include mq($m) {
+				padding: em(10);
+			}
 		}
 		&__picture {
 			position: relative;
@@ -81,6 +88,9 @@
 			background-image: url(http://res.cloudinary.com/dwdoisdas/image/upload/c_crop,w_501/v1507720681/profile_ppiaod.jpg);
 			background-position: center;
 			background-size: cover;
+			@include mq($m) {
+				transform: translateY(0);
+			}
 		}
 	}
 </style>
