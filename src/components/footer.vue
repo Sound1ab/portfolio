@@ -63,6 +63,10 @@
 			&.line-two {
 				color: $lightGrey;
 				font-weight: 500;
+				overflow-wrap: break-word;
+				@include mq($s) {
+					max-width: em(160);
+				}
 			}
 		}
 		&__links {

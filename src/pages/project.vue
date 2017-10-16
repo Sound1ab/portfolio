@@ -1,5 +1,5 @@
 <template>
-	<section class="project">
+	<section class="project" :key="$route.path">
 		<project-title
 			:title="title.title"
 			:sub-title="title.sub_title"

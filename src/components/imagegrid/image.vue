@@ -24,23 +24,11 @@
 <script>
 	export default {
 		name: 'ImageBlock',
-		props: ['data'],
+		props: ['data', 'width'],
 		methods: {
-			randomIntFromInterval (min, max) {
-				return Math.floor(Math.random()*(max-min+1)+min);
-			},
 			style () {
-				if (!this.style.count || this.style.count === 2) {
-					this.style.count = 0;
-				}
-				if (this.style.count === 0) {
-					this.style.randomNo = Math.ceil(this.randomIntFromInterval(30, 70) / 10) * 10;
-				} else {
-					this.style.randomNo = 100 - this.style.randomNo;
-				}
-				this.style.count++;
 				return {
-					flexBasis: `${this.style.randomNo}%`,
+					flexBasis: `${this.width}%`,
 				}
 			},
 			filter (data, searchTerm) {

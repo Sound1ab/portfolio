@@ -1,6 +1,9 @@
 <template>
 	<div class="hero-image">
-		<img class="hero-image__image" :src="src" />
+		<img
+			class="hero-image__image"
+			v-progressive-image="{src}"
+		/>
 	</div>
 </template>
 

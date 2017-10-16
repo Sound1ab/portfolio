@@ -5,6 +5,7 @@
 				v-for="(element, index) in projects"
 				:key="`image-block-${index}`"
 				:data="element"
+				:width="widths[index]"
 			>
 			</image-block>
 		</div>
@@ -17,6 +18,28 @@
 		name: 'ImageGrid',
 		components: {
 			'ImageBlock': () => import('@/components/imagegrid/image'),
+		},
+		data () {
+			return {
+				widths: [40, 60, 50, 50, 40, 60]
+			}
+		},
+		methods: {
+			randomIntFromInterval (min, max) {
+				return Math.floor(Math.random()*(max-min+1)+min);
+			},
+			width () {
+				if (!this.style.count || this.style.count === 2) {
+					this.style.count = 0;
+				}
+				if (this.style.count === 0) {
+					this.style.randomNo = Math.ceil(this.randomIntFromInterval(30, 70) / 10) * 10;
+				} else {
+					this.style.randomNo = 100 - this.style.randomNo;
+				}
+				this.style.count++;
+				return this.style.randomNo;
+			},
 		},
 		computed: {
 			...mapState({

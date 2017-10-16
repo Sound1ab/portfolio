@@ -168,7 +168,6 @@
 			margin: 0 auto;
 			text-align: center;
 			height: 100vh;
-			/*padding: em(100) em(50);*/
 			display: flex;
 			justify-content: center;
 			align-items: center;
