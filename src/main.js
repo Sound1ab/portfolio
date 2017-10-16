@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueAnalytics from 'vue-analytics'
 
 // Polyfills
 require('intersection-observer');
@@ -32,7 +33,11 @@ const options = {
 	location: 'top',
 	inverse: false
 }
-Vue.use(VueProgressBar, options)
+Vue.use(VueProgressBar, options);
+Vue.use(VueAnalytics, {
+	id: 'UA-108208117-1',
+	router
+});
 
 // Mixin globals
 Vue.mixin(fetchImg);
