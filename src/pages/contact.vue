@@ -56,6 +56,7 @@
 		methods: {
 			submit () {
 				this.modal = true;
+				this.form = Object.assign({}, this.form, { name: '', email: '', text: '' });
 				setTimeout(() => {
 					this.modal = false;
 				}, 1000)
